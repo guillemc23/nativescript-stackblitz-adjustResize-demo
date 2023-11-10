@@ -1,0 +1,49 @@
+<!-- <BottomSheet> -->
+<AbsoluteLayout>
+  <StackLayout width="100%">
+    <GridLayout height="40">
+      <Label text="header" horizontalAlignment="center"></Label>
+    </GridLayout>
+
+    <MDTabs selectedIndex="1">
+      <!-- The bottom tab UI is created via TabStrip (the containier) and TabStripItem (for each tab)-->
+      <MDTabStrip>
+        <MDTabStripItem class="special">
+          <Label text="Feed"></Label>
+        </MDTabStripItem>
+        <MDTabStripItem class="special">
+          <Label text="Chat"></Label>
+        </MDTabStripItem>
+      </MDTabStrip>
+
+      <!-- The number of TabContentItem components should corespond to the number of TabStripItem components -->
+      <MDTabContentItem>
+        <GridLayout>
+          <Label text="Feed Page" class="h2 text-center"></Label>
+        </GridLayout>
+      </MDTabContentItem>
+      <MDTabContentItem>
+        <GridLayout rows="3*, *">
+          <ScrollView row="0">
+            <StackLayout row="0">
+              <Label
+                *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]"
+                text="Sample message"
+                class="h2 text-center"
+                height="56"
+              ></Label>
+            </StackLayout>
+          </ScrollView>
+          <StackLayout row="1">
+            <TextView></TextView>
+          </StackLayout>
+        </GridLayout>
+      </MDTabContentItem>
+    </MDTabs>
+  </StackLayout>
+
+  <!-- <GridLayout #bottomSheet backgroundColor="white" height="70">
+    <Label text="This is the side drawer content"></Label>
+  </GridLayout> -->
+  <!-- </BottomSheet> -->
+</AbsoluteLayout>
